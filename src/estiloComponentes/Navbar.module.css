@@ -1,0 +1,98 @@
+.nav {
+display: flex;
+justify-content: space-around;
+align-items: center;
+background-color: lightblue;
+}
+
+.logo{
+width: 70px;
+height: 70px;
+}
+
+:global(.d) .fav{
+    color:red;
+}
+
+img {
+width: 110px;
+height: 110px;
+}
+
+ul{
+display: flex;
+width: 50vh;
+justify-content: space-between;
+}
+
+label {
+width:50px;
+height:20px;
+position: relative;
+display: block;
+background: #ebebeb;
+border-radius: 20px;
+box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+cursor: pointer;
+}
+  
+label:after {
+content: "";
+width:18px;
+height: 18px;
+position: absolute;
+background: linear-gradient(180deg,#ffcc89,#d8860b);
+border-radius: 18px;
+box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+input {
+width: 0;
+height: 0;
+visibility: hidden;
+}
+
+input:checked + label {
+background: #242424;
+}
+
+input:checked + label:after {
+left: 31px;
+background: linear-gradient(180deg,#777,#3a3a3a);
+transition: 0.3s;
+}
+
+label, label:after {
+transition: 0.3s
+}
+
+label:active:after{ 
+width: 26px; 
+}
+
+label svg {
+position: absolute;
+width: 12px;
+height: 12px;
+z-index: 100;
+}
+
+label svg.sol {
+left: 2px;
+top: 4px;
+fill: #fff;
+}
+
+label svg.luna {
+left: 36px;
+top: 4px;
+fill: #7e7e7e;
+}
+
+input:checked + label svg.sol {
+fill: #7e7e7e;
+}
+
+input:checked + label svg.luna {
+fill: #fff;
+} 
