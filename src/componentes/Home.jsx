@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card'
+import style from './../estiloComponentes/Home.module.css'
 
 function Home() {
   const [datos, setDatos]= useState([])
@@ -19,10 +20,12 @@ function Home() {
   },[])
   return (
     <>
-        <h2>Nuestros odontologos</h2>
-        <ul>
+        <h2 className={style.titulo}>Nuestros odontologos</h2>
+        {datos.length==0 ?
+        <p className={style.cargando}>Cargando...</p> :
+        <ul className={style.lista}>
             {datos.map(datos =><Card key={datos.id} nombre={datos.name} usuario={datos.username} id={datos.id} favs={handlefavs} />)}
-        </ul>
+        </ul>}
     </>
   )
 }

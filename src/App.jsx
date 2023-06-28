@@ -11,11 +11,11 @@ import Footer from './componentes/Footer'
 function App() {
   const {theme} = useContext(contexto)
   return (
-    <div className={theme}>
-      <header>
+    <>
+      <header className={theme}>
         <NavBar />
       </header>
-      <main>
+      <main className={theme}>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/contacto' element={<Contacto />} />
@@ -23,10 +23,10 @@ function App() {
         <Route path='/odontologo/:id' element={<CardDetalle />} />
       </Routes>
       </main>
-      <footer>
+      <footer className={theme}>
         <Footer />
       </footer>
-    </div>
+    </>
   )
 }
 

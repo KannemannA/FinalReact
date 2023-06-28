@@ -1,0 +1,49 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(11, 11, 11);
+    width: 170px;
+    background-color: rgb(229, 229, 229);
+    border-radius: 5px;
+    margin: calc(1%);
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    width: 110px;
+    height: 110px;
+    border-radius: 50px;
+    margin: 30px;
+}
+
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: rgb(255, 106, 0);
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+}
+
+.favs{
+    cursor: pointer;
+}
+
+.corazon{
+    clip-rule:evenodd;
+    display:inline;
+    fill:none;
+    stroke:#000000;
+    stroke-width:12;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:2;
+    stroke-dasharray:none;
+    stroke-opacity:1;
+    fill: rgb(229, 229, 229);
+}
