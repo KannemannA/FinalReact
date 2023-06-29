@@ -24,7 +24,7 @@ function Home() {
         {datos.length==0 ?
         <p className={style.cargando}>Cargando...</p> :
         <ul className={style.lista}>
-            {datos.map(datos =><Card key={datos.id} nombre={datos.name} usuario={datos.username} id={datos.id} favs={handlefavs} />)}
+            {datos.map(datos =><Card key={datos.id} nombre={datos.name} usuario={datos.username} id={datos.id} favs={handlefavs} boton={favoritos}/>)}
         </ul>}
     </>
   )
