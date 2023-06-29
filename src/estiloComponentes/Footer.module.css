@@ -1,0 +1,41 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #64c8e9;
+}
+
+.footerP{
+    color: #050c55;
+    margin: 20px 0;
+}
+
+.oculto{
+    visibility: hidden;
+    transition: visibility 0.3s ease;
+    margin-bottom: 20px;
+    color: #050c55;
+}
+
+.footerP:hover + .oculto{
+    visibility: visible;
+}
+
+.span{
+    background-image: linear-gradient(90deg, #FE1900 0, #F4F60C 35%, #0011FF 66%, #FF00F7 82%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+:global(.dark) .footer{
+    background-color: #050c55;
+}
+
+:global(.dark) .footerP, :global(.dark) .oculto{
+    color: #64c8e9;
+}

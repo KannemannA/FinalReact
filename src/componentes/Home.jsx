@@ -19,14 +19,14 @@ function Home() {
     FetchData()
   },[])
   return (
-    <>
+    <div className={style.main}>
         <h2 className={style.titulo}>Nuestros odontologos</h2>
         {datos.length==0 ?
         <p className={style.cargando}>Cargando...</p> :
         <ul className={style.lista}>
             {datos.map(datos =><Card key={datos.id} nombre={datos.name} usuario={datos.username} id={datos.id} favs={handlefavs} boton={favoritos}/>)}
         </ul>}
-    </>
+    </div>
   )
 }
 

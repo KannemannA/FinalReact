@@ -23,3 +23,16 @@
     flex: auto;
     font-size: 30px;
 }
+
+.main{
+    padding-bottom: 50px;
+    background-color: #89aeff;
+}
+
+:global(.dark) .main{
+    background-color: #383d74;
+}
+
+:global(.dark) .titulo{
+    color: #dadada;
+}
